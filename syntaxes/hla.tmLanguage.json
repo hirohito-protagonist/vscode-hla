@@ -1,0 +1,88 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "hla",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#chars"
+		},
+		{
+			"begin": "^\\s*((#)\\s*(include|includeonce(?:_next)?|import))\\b\\s*",
+			"beginCaptures": {
+				"1": {
+					"name": "keyword.control.directive.hla"
+				},
+				"2": {
+					"name": "punctuation.definition.directive.hla"
+				}
+			},
+			"end": "(?=(?://|/\\*))|(?<!\\\\)(?=\\n)",
+			"name": "meta.preprocessor.include.hla",
+			"patterns": [
+				{
+					"begin": "\"",
+					"beginCaptures": {
+						"0": {
+							"name": "punctuation.definition.string.begin.hla"
+						}
+					},
+					"end": "\"",
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.definition.string.end.hla"
+						}
+					},
+					"name": "string.quoted.double.include.hla"
+				}
+			]
+		},
+		{
+			"match": "\\b(static|readonly|var|const|type)\\b",
+			"name": "storage.modifier.hla"
+		},
+		{
+			"match": "\\b(mov|add|sub|bound|dec|shl|and|or|rol|shr|into|lea|not|cbw|cwde|movsx|neg)\\b",
+			"name": "support.function.hla"
+		},
+		{
+			"match": "\\b(eax|ebx|ecx|al|ax|bx)\\b",
+			"name": "markup.italic.hla"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.hla",
+				"match": "\\b(program|begin|end|for|endfor|if|then|do|else|elseif|endif|record|endrecord|repeat|until|try|exception|endtry|forever|while|endwhile|breakif|call|procedure|unprotected|break)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.hla",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.hla",
+					"match": "\\\\."
+				}
+			]
+		},
+		"chars": {
+			"name": "string.quoted.single.hla",
+			"begin": "'",
+			"end": "'",
+			"patterns": [
+				{
+					"name": "constant.character.escape.hla",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.hla"
+}

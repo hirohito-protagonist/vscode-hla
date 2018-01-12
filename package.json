@@ -1,0 +1,32 @@
+{
+    "name": "vscode-hla",
+    "displayName": "vscode-hla",
+    "description": "",
+    "version": "0.0.1",
+    "publisher": "hiro",
+    "engines": {
+        "vscode": "^1.18.0"
+    },
+    "categories": [
+        "Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "hla",
+            "aliases": ["hla", "hla"],
+            "extensions": [".hla", ".hhf"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "hla",
+            "scopeName": "source.hla",
+            "path": "./syntaxes/hla.tmLanguage.json"
+        }],
+        "snippets": [
+            {
+              "language": "hla",
+              "path": "./snippets/hla.json"
+            }
+        ]
+    }
+}

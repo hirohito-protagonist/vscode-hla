@@ -1,0 +1,13 @@
+{
+    "program": {
+        "prefix": "program",
+        "body": [
+            "program ${1:Name};",
+            "#include(\"stdlib.hhf\")",
+            "begin ${1:Name};",
+            "    $0",
+            "end ${1:Name};"
+        ],
+        "description": "Program entry point"
+    }
+}
