@@ -6,6 +6,9 @@
 			"include": "#keywords"
 		},
 		{
+			"include": "#comments"
+		},
+		{
 			"include": "#strings"
 		},
 		{
@@ -80,6 +83,50 @@
 				{
 					"name": "constant.character.escape.hla",
 					"match": "\\\\."
+				}
+			]
+		},
+		"comments": {
+			"patterns": [
+				{
+					"captures": {
+						"0": {
+							"name": "punctuation.definition.comment.hla"
+						}
+					},
+					"match": "/\\*\\*/",
+					"name": "comment.block.empty.hla"
+				},
+				{
+					"begin": "/\\*",
+					"captures": {
+						"0": {
+							"name": "punctuation.definition.comment.hla"
+						}
+					},
+					"end": "\\*/",
+					"name": "comment.block.hla"
+				},
+				{
+					"begin": "(^[ \\t]+)?(?=//)",
+					"beginCaptures": {
+						"1": {
+							"name": "punctuation.whitespace.comment.leading.hla"
+						}
+					},
+					"end": "(?!\\G)",
+					"patterns": [
+						{
+							"begin": "//",
+							"beginCaptures": {
+								"0": {
+									"name": "punctuation.definition.comment.hla"
+								}
+							},
+							"end": "\\n",
+							"name": "comment.line.double-slash.hla"
+						}
+					]
 				}
 			]
 		}
