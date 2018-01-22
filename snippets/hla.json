@@ -9,5 +9,42 @@
             "end ${1:Name};"
         ],
         "description": "Program entry point"
+    },
+    "procedure": {
+        "prefix": "procedure",
+        "body": [
+            "procedure ${1:Name};",
+            "begin ${1:Name};",
+            "    $0",
+            "end ${1:Name};"
+        ],
+        "description": "Procedure"
+    },
+    "repeat": {
+        "prefix": "repeat",
+        "body": [
+            "repeat",
+            "    $0",
+            "until(${1:Condition});"
+        ],
+        "description": "repeat until loop"
+    },
+    "while": {
+        "prefix": "while",
+        "body": [
+            "while(${1:Condition}) do",
+            "    $0",
+            "endwhile;"
+        ],
+        "description": "while loop"
+    },
+    "for": {
+        "prefix": "for",
+        "body": [
+            "for(mov(0, eax); eax < ${1:Size}; inc(eax)) do",
+            "    $0",
+            "endfor;"
+        ],
+        "description": "for loop"
     }
 }
