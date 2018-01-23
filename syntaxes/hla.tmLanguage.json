@@ -49,7 +49,7 @@
 			"name": "storage.modifier.hla"
 		},
 		{
-			"match": "\\b(mov|add|sub|bound|dec|shl|and|or|rol|shr|into|lea|not|cbw|cwde|movsx|neg)\\b",
+			"match": "\\b(mov|add|sub|bound|dec|shl|and|or|rol|shr|into|lea|not|cbw|cwde|movsx|neg|push|pop)\\b",
 			"name": "support.function.hla"
 		},
 		{
