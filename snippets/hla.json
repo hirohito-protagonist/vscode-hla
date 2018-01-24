@@ -20,6 +20,26 @@
         ],
         "description": "Procedure"
     },
+    "procedurep": {
+        "prefix": "procedurep",
+        "body": [
+            "procedure ${1:Name}(${2:Param}:${3:Type});",
+            "begin ${1:Name};",
+            "    $0",
+            "end ${1:Name};"
+        ],
+        "description": "Procedure paramteres pass by value. The default behavior."
+    },
+    "procedureval": {
+        "prefix": "procedureval",
+        "body": [
+            "procedure ${1:Name}(val ${2:Param}:${3:Type});",
+            "begin ${1:Name};",
+            "    $0",
+            "end ${1:Name};"
+        ],
+        "description": "Procedure paramteres pass by value."
+    },
     "repeat": {
         "prefix": "repeat",
         "body": [
