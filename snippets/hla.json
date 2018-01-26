@@ -40,6 +40,16 @@
         ],
         "description": "Procedure paramteres pass by value."
     },
+    "procedurevar": {
+        "prefix": "procedurevar",
+        "body": [
+            "procedure ${1:Name}(var ${2:Param}:${3:Type});",
+            "begin ${1:Name};",
+            "    $0",
+            "end ${1:Name};"
+        ],
+        "description": "Procedure paramteres pass by referance."
+    },
     "repeat": {
         "prefix": "repeat",
         "body": [
