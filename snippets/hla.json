@@ -50,6 +50,47 @@
         ],
         "description": "Procedure paramteres pass by referance."
     },
+
+    "procedurer": {
+        "prefix": "procedurer",
+        "body": [
+            "procedure ${1:Name};@returns(\"${2:EAX}\");",
+            "begin ${1:Name};",
+            "    $0",
+            "end ${1:Name};"
+        ],
+        "description": "Procedure with returns"
+    },
+    "procedurepr": {
+        "prefix": "procedurepr",
+        "body": [
+            "procedure ${1:Name}(${2:Param}:${3:Type});@returns(\"${4:EAX}\");",
+            "begin ${1:Name};",
+            "    $0",
+            "end ${1:Name};"
+        ],
+        "description": "Procedure paramteres pass by value with returns."
+    },
+    "procedurevalr": {
+        "prefix": "procedurevalr",
+        "body": [
+            "procedure ${1:Name}(val ${2:Param}:${3:Type});@returns(\"${4:EAX}\");",
+            "begin ${1:Name};",
+            "    $0",
+            "end ${1:Name};"
+        ],
+        "description": "Procedure paramteres pass by value with returns."
+    },
+    "procedurevarr": {
+        "prefix": "procedurevarr",
+        "body": [
+            "procedure ${1:Name}(var ${2:Param}:${3:Type});@returns(\"${4:EAX}\");",
+            "begin ${1:Name};",
+            "    $0",
+            "end ${1:Name};"
+        ],
+        "description": "Procedure paramteres pass by referance with returns."
+    },
     "repeat": {
         "prefix": "repeat",
         "body": [
