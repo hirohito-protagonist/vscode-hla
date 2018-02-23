@@ -55,6 +55,10 @@
 		{
 			"match": "\\b(eax|ax|ah|al|ebx|bx|bh|bl|ecx|cx|ch|cl|edx|dx|dh|dl|esi|si|edi|di|ebp|bp|esp|sp)\\b",
 			"name": "markup.italic.hla"
+		},
+		{
+			"match": "\\b(byte|boolean|enum|uns8|int8|char|word|uns16|int16|dword|uns32|int32|real32|string|pointer|uns64|int64|qword|thunk|real64|tbyte|real80|uns128|int128|lword|cset)\\b",
+			"name": "storage.type.hla"
 		}
 	],
 	"repository": {
