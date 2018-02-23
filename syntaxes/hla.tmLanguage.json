@@ -53,7 +53,7 @@
 			"name": "support.function.hla"
 		},
 		{
-			"match": "\\b(eax|ebx|ecx|al|ax|bx)\\b",
+			"match": "\\b(eax|ax|ah|al|ebx|bx|bh|bl|ecx|cx|ch|cl|edx|dx|dh|dl|esi|si|edi|di|ebp|bp|esp|sp)\\b",
 			"name": "markup.italic.hla"
 		}
 	],
